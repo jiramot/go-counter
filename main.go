@@ -23,6 +23,6 @@ func main() {
 	handler := counter.NewHandle(db, cache, config)
 	r.GET("/info", handler.Info)
 	r.GET("/increase", handler.Increase)
-	r.GET("/setup/:count", handler.Setup)
+	r.GET("/reset", handler.Reset)
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
