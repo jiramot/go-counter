@@ -5,7 +5,7 @@ type imm struct {
 }
 
 func NewInMemory() *imm {
-	return &imm{Count: 0}
+	return &imm{Count: 5}
 }
 
 func (i *imm) GetCount() int {

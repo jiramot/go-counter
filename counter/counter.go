@@ -22,7 +22,16 @@ type Config struct {
 }
 
 type handler struct {
+	svc *service
+}
+
+type service struct {
 	dataStore  dataStore
 	cacheStore cacheStore
 	config     *Config
+}
+
+type counterService interface {
+	Reset() int
+	Info() int
 }
